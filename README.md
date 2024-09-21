@@ -1,4 +1,4 @@
-#Sudoku Solver
+# Sudoku Solver
 A simple Sudoku solver that uses the backtracking algorithm to solve any 9x9 Sudoku grid. The solver fills in the missing numbers while ensuring that the Sudoku rules are followed:
 
 - Each row contains the numbers 1 to 9 without repetition.
