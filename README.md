@@ -1,26 +1,28 @@
-Sudoku Solver
-This is a simple Sudoku solver that uses a backtracking algorithm to fill in the missing numbers of a 9x9 Sudoku grid. The solver ensures that the solution follows the rules of Sudoku:
+**Sudoku Solver**
+A simple Sudoku solver that uses the backtracking algorithm to solve any 9x9 Sudoku grid. The solver fills in the missing numbers while ensuring that the Sudoku rules are followed:
 
-Each number from 1 to 9 appears only once in each row.
-Each number from 1 to 9 appears only once in each column.
-Each number from 1 to 9 appears only once in each 3x3 subgrid.
+- Each row contains the numbers 1 to 9 without repetition.
+- Each column contains the numbers 1 to 9 without repetition.
+- Each 3x3 subgrid contains the numbers 1 to 9 without repetition.
 How It Works
-The Sudoku solver uses the following steps:
+The solver uses a backtracking algorithm. The process works as follows:
 
-Find an empty cell: The algorithm scans the grid for the first empty cell (represented by 0).
+1. Find an empty cell:
 
-Try a number: Starting with 1, it tries to place a number in the empty cell.
+- The algorithm scans the grid for the first empty cell (represented by 0).
+2. Try placing a number:
 
-Check if the number is valid:
+- Starting from 1, the algorithm attempts to place a number in the empty cell.
+3. Check if the number is valid:
 
-The number must not already exist in the same row.
-The number must not already exist in the same column.
-The number must not already exist in the 3x3 subgrid that contains the cell.
-Recursively try the next cell:
+- The number must not exist in the same row.
+- The number must not exist in the same column.
+- The number must not exist in the same 3x3 subgrid.
+4. Recursively solve the next cell:
 
-If the current number is valid, the algorithm recursively tries to solve the next empty cell.
-If all cells are filled, the puzzle is solved!
-Backtrack if needed:
+- If the current number is valid, the algorithm moves on to the next empty cell.
+- If the entire grid is filled, the puzzle is solved!
+5. Backtrack if needed:
 
-If a number doesn't lead to a solution, the algorithm backtracks, removes the number from the current cell, and tries the next possible number.
-This process continues until the puzzle is solved or no solution is found.
+- If no valid number can be placed in a cell, the algorithm backtracks by removing the last placed number and trying the next possible number.
+This process continues until the puzzle is solved or determined to be unsolvable. 
